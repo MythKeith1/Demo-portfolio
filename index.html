@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Do-or-Die — Responsive Portfolio</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Loader / Animated logo -->
+  <div id="loader">
+    <div class="loader-wrap">
+      <div class="loader-logo" id="loaderLogo">
+        <svg width="56" height="56" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="36" stroke="rgba(255,255,255,0.12)" stroke-width="6" />
+          <path d="M30 68c10-20 40-20 50 0" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".9"/>
+        </svg>
+      </div>
+      <div class="loader-text">Do-or-Die Portfolio</div>
+    </div>
+  </div>
+
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor">
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="cursor-core"></div>
+  </div>
+
+  <header>
+    <div class="brand">
+      <div class="logo-circle" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 12h16M12 4v16" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <h1>Do-or-Die Studio</h1>
+    </div>
+
+    <nav aria-label="Main Navigation">
+      <a href="#projects">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="hamburger" id="hamburger" aria-hidden="true">
+      <span></span>
+    </div>
+  </header>
+
+  <!-- Mobile nav panel -->
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <nav style="display:flex;flex-direction:column;gap:18px">
+      <a href="#projects">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a class="button" href="#contact">Start Project</a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <h2>Bold design. Surgical clarity. <span class="anim-words" id="animWords">Creative — Professional — Skilled</span></h2>
+          <p class="tagline">I build responsive, conversion-focused websites from concept to deployment. I thrive on constraints and deliver fast, memorable, and resilient web experiences.</p>
+
+          <div class="stack">
+            <div>
+              <a class="button" href="#contact">Start a Project</a>
+              <span style="margin-left:12px;color:var(--muted);font-weight:600">48hr one-page turnaround</span>
+            </div>
+            <div class="muted-small">Available for remote work — built on grit & proven by outcomes.</div>
+          </div>
+        </div>
+
+        <div class="profile-wrap">
+          <div class="profile" aria-hidden="true">
+            <img src="https://images.unsplash.com/photo-1531123414780-f1d7a5ea3f27?q=80&w=800&auto=format&fit=crop" alt="Profile">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects" id="projects">
+      <h3 style="font-family:'Playfair Display';font-size:24px;margin-bottom:14px">Selected Work</h3>
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="project-visual" data-parallax="0.12">
+            <div style="font-weight:800;font-size:20px;">Café — Responsive Redesign</div>
+          </div>
+          <h3>Before → After: Local Café</h3>
+          <p class="muted-small">Mobile-first redesign that increased clarity and online orders. Built fast, deployed to GitHub Pages.</p>
+        </article>
+
+        <article class="project-card">
+          <div class="project-visual" data-parallax="0.08">
+            <div style="font-weight:800;font-size:20px;">Coach — Personal Brand</div>
+          </div>
+          <h3>Personal Brand Landing</h3>
+          <p class="muted-small">A conversion-focused landing page with a sticky CTA and micro-interactions.</p>
+        </article>
+
+        <article class="project-card">
+          <div class="project-visual" data-parallax="0.16">
+            <div style="font-weight:800;font-size:20px;">Shop — Product Landing</div>
+          </div>
+          <h3>E-commerce Landing Concept</h3>
+          <p class="muted-small">Bright, clean hero and fast checkout flow that prioritises mobile buyers.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+      <div>
+        <h3 style="font-family:'Playfair Display';font-size:22px;margin-bottom:12px">About This Project</h3>
+        <p class="muted-small">This portfolio is a distilled expression of craft created under constraints. Each layout is responsive across three breakpoints, uses CSS Grid for structure, and prioritises readability, performance, and conversion.</p>
+      </div>
+
+      <aside style="background:var(--card);padding:18px;border-radius:14px">
+        <h4>Quick facts</h4>
+        <div class="muted-small">3 years of personal projects • Responsive Design Certificate • Basic JavaScript • 500+ LinkedIn</div>
+        <div style="margin-top:12px"><a class="button" href="#contact">Hire Me</a></div>
+      </aside>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+      <h3 style="font-family:'Playfair Display';font-size:22px;margin-bottom:12px">Let’s build something wild</h3>
+      <form onsubmit="event.preventDefault();alert('Message sent — placeholder (replace with form handler)');" style="margin-top:18px;display:grid;gap:12px;max-width:680px">
+        <input type="text" placeholder="Your name" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Project brief" rows="5"></textarea>
+        <button class="button" type="submit">Send message</button>
+      </form>
+    </section>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div class="muted-small">© Do-or-Die Studio • Built with grit</div>
+        <div class="muted-small">Made for small businesses • 48hr sites</div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Floating Contact Buttons -->
+  <div class="floating-contact">
+    <a href="https://wa.me/27634668020" target="_blank" aria-label="WhatsApp Contact" class="whatsapp">
+      <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp">
+    </a>
+    <a href="mailto:Keithmyth2@yahoo.com" aria-label="Send Email" class="email">
+      <img src="https://img.icons8.com/color/48/000000/new-post.png" alt="Email">
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
